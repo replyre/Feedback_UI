@@ -1,0 +1,214 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgb(13, 209, 209),
+    cyan,
+    rgb(140, 205, 205)
+  );
+  flex-direction: column;
+}
+
+.container {
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px 2px rgba(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 32px;
+  color: rgb(12, 84, 240);
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.5px;
+  text-shadow: 0px 2px 2px rgb(0, 149, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.icons {
+  margin: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.icon {
+  background-color: rgba(127, 255, 212, 0.612);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px 2px rgba(255, 255, 255, 0.7);
+}
+
+.icon:hover,
+.icon.active {
+  cursor: pointer;
+  transition: all 300ms ease;
+  color: white;
+  border: 2px solid white;
+  background-color: rgba(18, 134, 95, 0.768);
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
+}
+
+.icon:hover > span,
+.icon.active > span {
+  transform: scale(1.2);
+  transition: all 300ms ease;
+}
+
+.textbox {
+  border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+  color: black;
+  font-size: 20px;
+  height: 100px;
+  border: 2px solid rgb(140, 205, 205);
+  resize: none;
+  outline: none;
+  box-shadow: 0px 0px 12px 2px rgba(255, 255, 255, 0.7);
+}
+.textbox:focus {
+  border: 2px solid black;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
+}
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.button a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffa12b;
+  display: block;
+  position: relative;
+  padding: 20px 40px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button a:active {
+  top: 10px;
+  background-color: #f78900;
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+}
+
+.button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.satisfied_icon_anime {
+  animation: mov 2s linear 1;
+}
+
+.neutral_icon_anime {
+  animation: side 2s linear 1;
+}
+
+.unhappy_icon_anime {
+  animation: rot 2s linear 1;
+}
+
+@keyframes mov {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-30deg);
+  }
+  40% {
+    transform: rotate(+30deg);
+  }
+
+  80% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(+30deg);
+  }
+}
+
+@keyframes side {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(+10px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(+10px);
+  }
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(80deg);
+  }
+
+  t0 {
+    transform: rotate(0deg);
+  }
+}
+
+.error {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px 5px red;
+  margin: 20px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(255, 0, 0, 0.741);
+}
