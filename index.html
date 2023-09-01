@@ -8,31 +8,59 @@
     <link rel="shortcut icon" href="feedback.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="container">
-      <div class="heading">Review</div>
-      <div class="icons">
-        <span class="icon" id="satisfied"
-          >Satisfied
-          <span id="satisfied_icon" style="font-size: 32px">😊</span></span
-        >
-        <span class="icon" id="neutral"
-          >Neutral
-          <span id="neutral_icon" style="font-size: 32px">😐</span></span
-        >
-        <span class="icon" id="unhappy"
-          >Unhappy
-          <span id="unhappy_icon" style="font-size: 32px">😒</span></span
-        >
-      </div>
-      <textarea class="textbox" placeholder="Enter your remark (optional)">
-      </textarea>
+    <form
+      target="_blank"
+      action="https://formsubmit.co/rejoinrgupta@gmail.com"
+      method="POST"
+    >
+      <div class="container" id="container">
+        <div class="heading">Review</div>
+        <div class="icons">
+          <span class="icon" id="satisfied"
+            >Satisfied
+            <span id="satisfied_icon" style="font-size: 32px">😊</span></span
+          >
+          <span class="icon" id="neutral"
+            >Neutral
+            <span id="neutral_icon" style="font-size: 32px">😐</span></span
+          >
+          <span class="icon" id="unhappy"
+            >Unhappy
+            <span id="unhappy_icon" style="font-size: 32px">😒</span></span
+          >
+        </div>
+        <input
+          name="name"
+          class="text"
+          type="text"
+          placeholder="Enter your Name"
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          class="text"
+          placeholder="Enter your E-mail"
+          required
+        />
+        <textarea
+          class="textbox"
+          name="message"
+          placeholder="Enter your remark (optional)"
+        ></textarea>
 
-      <div ontouchstart="">
-        <div id="btn" class="button">
-          <a href="#">Send</a>
+        <div ontouchstart="" id="btn_back" style="display: none">
+          <button
+            type="submit"
+            id="btn"
+            class="button submit_back"
+            onclick="feedback()"
+          >
+            <p>Send</p>
+          </button>
         </div>
       </div>
-    </div>
+    </form>
     <script src="index.js"></script>
     <p class="error">Nothing selected</p>
   </body>
