@@ -15,5 +15,5 @@ As the name suggests, it's a UI which provides an interative feedback form.
 * no check on name or email added
 
 ## note:
-* the sight currently sends feedback to my mail id, please change the email to get the message at your end.
+* the site currently sends feedback to my mail id, please change the email to get the message at your end.
 * visit <a href ="https://formsubmit.co/">formsubmit.co</a> for more insight. 
